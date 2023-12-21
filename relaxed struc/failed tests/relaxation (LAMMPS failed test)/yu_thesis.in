@@ -1,0 +1,62 @@
+# Y-shaped DNA model: large system with patches
+# 10 atoms per molecule
+# to aquire the equilibirum status from the situation # dat file re-generated input
+##### VARIABLES #####
+variable T equal 0.1 
+variable N equal 10 
+variable dim equal 10 
+variable  ep equal 4 
+variable run_steps equal 2000000
+####### PARAMETERS ##########
+units lj
+atom_style hybrid bond ellipsoid
+neighbor 0.4 bin
+neigh_modify every 1 delay 1 check yes 
+comm_modify vel yes
+####### READ ############
+read_data output.data
+########### pair lj/cut ONLY ##################
+
+pair_style lj/cut 1.12
+pair_modify shift yes
+pair_coeff * * 0 0.0 0.0
+pair_coeff 1 1 1 1.0 1.12
+pair_coeff 1 2 1 1.0 1.12
+pair_coeff 2 2 1 1.0 1.12
+pair_coeff 3 3 1 0.6 0.67
+pair_coeff 4 4 1 0.6 0.67
+pair_coeff 3 4 ${ep} 0.2 0.50 # attractive
+
+######### BONDS ###########
+bond_style harmonic 
+special_bonds lj 0 1 1
+bond_coeff 1 300.0 0.96 # bead-bead bonds bond_coeff 2 300.0 0.56 # bead-patch bonds
+
+# angle_style harmonic
+# angle in one molecule
+# angle_coeff 1 100.0 120 
+# angle_coeff 2 100.0 180 
+# angle_coeff 3 100.0 102 
+# angle_coeff 4 100.0 108
+######## THERMAL ############
+timestep 0.005
+thermo 10000
+thermo_style custom time temp #step temp time pe press atoms vol
+thermo_modify norm no
+###### INITIAL #########
+reset_timestep 0
+
+ ######### FIX ###########
+fix 4 all nve
+fix 5 all langevin ${T} ${T} 1 123456 
+fix recen1 all recenter INIT INIT INIT
+#### COMPUTE + OUTPUT pairs, bonds and angles ####
+dump 1 all custom 10000 output_${T}_10e4.dump id mol type x y z vx vy vz
+compute 1 all property/local patom1 patom2
+compute 2 all pair/local dist eng force
+# dump 2 all local 10000 pairlocal_${T}_10e4.dump c_1[1] c_1[2] c_2 [1] c_2 [2] c_2 [3]
+########### RUN #############
+run ${run_steps}
+#shell cp log.lammps log_A_${A}_omega_${om}.lammps
+########## Write dat files ######
+write_data after_run.dat write_restart after_run.reset

@@ -1,0 +1,122 @@
+# Initialize
+clear
+units lj
+dimension 3
+boundary p p p
+neighbor 0.4 bin 
+
+atom_style hybrid bond ellipsoid
+# atom-ID atom-type x y z molecule-ID density
+atom_modify map array
+
+# Read data file
+read_data output.data
+
+# Potential
+# pair_style lj/cut 2.5
+# pair_coeff 1 1 1.0 1.0 2.5
+# pair_coeff 2 2 1.0 1.0 2.5
+# pair_coeff 3 3 1.0 1.0 2.5
+# pair_coeff 4 4 1.0 1.0 2.5
+# pair_coeff 1 4 1.0 1.0 2.5
+# pair_coeff 2 3 1.0 1.0 2.5
+
+
+# pair_style lj/cut 1.0 
+# pair_modify shift yes 
+# pair_coeff * * 1 1.0 1.12
+
+pair_style lj/cut 1.12
+pair_modify shift yes
+pair_coeff * * 0 0.0 0.0
+pair_coeff 1 1 1 1.0 1.12
+pair_coeff 1 2 1 1.0 1.12
+pair_coeff 2 2 1 1.0 1.12
+pair_coeff 3 3 1 0.6 0.67
+pair_coeff 4 4 1 0.6 0.67
+pair_coeff 3 4 4 0.2 0.50
+
+
+# Bond coefficients
+bond_style harmonic
+bond_coeff 1 -10 -60
+
+# Ellipsoidal settings
+# region ellipsoid block -100 100 -100 100 -100 100 units box
+# group ellipsoids type 1 2 3 4
+# group ellipsoid_region region ellipsoid
+
+# Fix for ellipsoidal particles
+# fix 1 ellipsoids nve/body
+# Clustering
+
+# sticky ends
+group cluster1 id 29:40
+group cluster2 id 69:80
+group cluster3 id 109:120
+
+group cluster4 id 1:14
+group cluster5 id 55:68
+group cluster6 union cluster4 cluster5 
+
+group cluster7 id 15:28
+group cluster8 id 81:94
+group cluster9 union cluster7 cluster8
+
+group cluster10 id 41:54
+group cluster11 id 95:108
+group cluster12 union cluster10 cluster11
+
+# Definir los rigid bodies usando los grupos
+# fix 1 cluster1 rigid single
+# fix 2 cluster2 rigid single
+# fix 3 cluster3 rigid single
+# fix 6 cluster6 rigid single
+# fix 9 cluster9 rigid single
+# fix 12 cluster12 rigid single
+
+# Definir los centros de masa de los grupos
+# fix 1 cluster1 setforce 0.0 0.0 0.0
+# fix 2 cluster2 setforce 0.0 0.0 0.0
+# fix 3 cluster3 setforce 0.0 0.0 0.0
+# fix 6 cluster6 setforce 0.0 0.0 0.0
+# fix 9 cluster9 setforce 0.0 0.0 0.0
+# fix 12 cluster12 setforce 0.0 0.0 0.0
+
+fix 1 cluster1 nve
+fix 2 cluster2 nve
+fix 3 cluster3 nve
+fix 6 cluster6 langevin 0.1 0.1 1 123456
+fix 9 cluster9 langevin 0.1 0.1 1 123456
+fix 12 cluster12 langevin 0.1 0.1 1 123456
+
+# fix 4 all nve
+# fix 5 all langevin 1 123456 fix recen1 all recenter INIT INIT INIT
+
+# Run simulation
+timestep 0.000001
+thermo 1000
+
+# Calcular energía potencial
+compute pe all pe
+variable pe_thermo equal c_pe
+
+# Dump configuration of atoms
+# dump myDump all custom 10000 thermo_dump id type x y z vx vy vz c_pe
+
+
+# Configurar la salida de información per-átomo en la termoestadística
+thermo_modify format float %16.8f
+
+# Ejecutar la simulación
+run 10000
+
+# No es necesario undump, ya que no estás utilizando dump myDump después de run
+
+# Display the content of the dump file using shell
+# shell cat thermo_dump.txt
+
+# Imprimir la energía potencial en la terminal
+# thermo_style custom step temp v_pe_thermo
+# thermo 1000
+# run 0

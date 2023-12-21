@@ -1,0 +1,358 @@
+LAMMPS (2 Aug 2023)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+# Y-shaped DNA model: large system with patches
+# 10 atoms per molecule
+# to aquire the equilibirum status from the situation # dat file re-generated input
+##### VARIABLES #####
+variable T equal 0.1
+variable N equal 10
+variable dim equal 10
+variable  ep equal 4
+variable run_steps equal 2000000
+####### PARAMETERS ##########
+units lj
+atom_style hybrid bond ellipsoid
+WARNING: Atom style hybrid defines both, per-type and per-atom masses; both must be set, but only per-atom masses will be used (src/atom_vec_hybrid.cpp:132)
+neighbor 0.4 bin
+neigh_modify every 1 delay 1 check yes
+comm_modify vel yes
+####### READ ############
+read_data output.data
+Reading data file ...
+  orthogonal box = (0 0 0) to (33 33 33)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  120 atoms
+  reading velocities ...
+  120 velocities
+  120 ellipsoids
+  scanning bonds ...
+  1 = max bonds/atom
+  reading bonds ...
+  117 bonds
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     2 = max # of 1-3 neighbors
+     4 = max # of 1-4 neighbors
+     6 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.006 seconds
+########### pair lj/cut ONLY ##################
+
+pair_style lj/cut 1.12
+pair_modify shift yes
+pair_coeff * * 0 0.0 0.0
+pair_coeff 1 1 1 1.0 1.12
+pair_coeff 1 2 1 1.0 1.12
+pair_coeff 2 2 1 1.0 1.12
+pair_coeff 3 3 1 0.6 0.67
+pair_coeff 4 4 1 0.6 0.67
+pair_coeff 3 4 ${ep} 0.2 0.50 # attractive
+pair_coeff 3 4 4 0.2 0.50 
+
+######### BONDS ###########
+bond_style harmonic
+special_bonds lj 0 1 1
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        1        1       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     2 = max # of 1-3 neighbors
+     4 = max # of 1-4 neighbors
+     6 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+bond_coeff 1 300.0 0.96 # bead-bead bonds bond_coeff 2 300.0 0.56 # bead-patch bonds
+
+# angle_style harmonic
+# angle in one molecule
+# angle_coeff 1 100.0 120
+# angle_coeff 2 100.0 180
+# angle_coeff 3 100.0 102
+# angle_coeff 4 100.0 108
+######## THERMAL ############
+timestep 0.005
+thermo 10000
+thermo_style custom time temp #step temp time pe press atoms vol
+thermo_modify norm no
+###### INITIAL #########
+reset_timestep 0
+
+ ######### FIX ###########
+fix 4 all nve
+fix 5 all langevin ${T} ${T} 1 123456
+fix 5 all langevin 0.1 ${T} 1 123456
+fix 5 all langevin 0.1 0.1 1 123456
+fix recen1 all recenter INIT INIT INIT
+#### COMPUTE + OUTPUT pairs, bonds and angles ####
+dump 1 all custom 10000 output_${T}_10e4.dump id mol type x y z vx vy vz
+dump 1 all custom 10000 output_0.1_10e4.dump id mol type x y z vx vy vz
+compute 1 all property/local patom1 patom2
+compute 2 all pair/local dist eng force
+# dump 2 all local 10000 pairlocal_${T}_10e4.dump c_1[1] c_1[2] c_2 [1] c_2 [2] c_2 [3]
+########### RUN #############
+run ${run_steps}
+run 2000000
+Generated 0 of 6 mixed pair_coeff terms from geometric mixing rule
+WARNING: Communication cutoff 1.52 is shorter than a bond length based estimate of 1.8399999999999999. This may lead to errors. (src/comm.cpp:723)
+Neighbor list info ...
+  update: every = 1 steps, delay = 1 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 1.52
+  ghost atom cutoff = 1.52
+  binsize = 0.76, bins = 44 44 44
+  3 neighbor lists, perpetual/occasional/extra = 1 2 0
+  (1) pair lj/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+  (2) compute property/local, occasional, copy from (1)
+      attributes: half, newton on
+      pair build: copy
+      stencil: none
+      bin: none
+  (3) compute pair/local, occasional, copy from (1)
+      attributes: half, newton on
+      pair build: copy
+      stencil: none
+      bin: none
+WARNING: Communication cutoff 1.52 is shorter than a bond length based estimate of 1.8399999999999999. This may lead to errors. (src/comm.cpp:723)
+Per MPI rank memory allocation (min/avg/max) = 6.545 | 6.545 | 6.545 Mbytes
+     Time           Temp     
+ 0              0            
+ 50             0.09906342   
+ 100            0.10757391   
+ 150            0.10307136   
+ 200            0.10065561   
+ 250            0.10949286   
+ 300            0.095823012  
+ 350            0.099054174  
+ 400            0.10690905   
+ 450            0.11140163   
+ 500            0.10001527   
+ 550            0.10214698   
+ 600            0.10051728   
+ 650            0.089648001  
+ 700            0.089546401  
+ 750            0.10156701   
+ 800            0.096992634  
+ 850            0.0984586    
+ 900            0.11132964   
+ 950            0.094708375  
+ 1000           0.099459015  
+ 1050           0.098626366  
+ 1100           0.10308427   
+ 1150           0.10340971   
+ 1200           0.11385653   
+ 1250           0.10320828   
+ 1300           0.11824427   
+ 1350           0.09076113   
+ 1400           0.10426773   
+ 1450           0.084787563  
+ 1500           0.099536302  
+ 1550           0.10699949   
+ 1600           0.090767466  
+ 1650           0.095443467  
+ 1700           0.096659574  
+ 1750           0.11196415   
+ 1800           0.11347955   
+ 1850           0.10115642   
+ 1900           0.10428268   
+ 1950           0.088895789  
+ 2000           0.098667008  
+ 2050           0.10129395   
+ 2100           0.10418884   
+ 2150           0.10454508   
+ 2200           0.10027932   
+ 2250           0.11183584   
+ 2300           0.1027116    
+ 2350           0.096270391  
+ 2400           0.10409643   
+ 2450           0.098279246  
+ 2500           0.097420875  
+ 2550           0.10187054   
+ 2600           0.11540449   
+ 2650           0.093987018  
+ 2700           0.095471966  
+ 2750           0.092309331  
+ 2800           0.099916534  
+ 2850           0.10444824   
+ 2900           0.10314176   
+ 2950           0.10447439   
+ 3000           0.10768017   
+ 3050           0.10551118   
+ 3100           0.10353856   
+ 3150           0.096846597  
+ 3200           0.10576785   
+ 3250           0.097242069  
+ 3300           0.10915284   
+ 3350           0.10064837   
+ 3400           0.098909464  
+ 3450           0.10336593   
+ 3500           0.098776071  
+ 3550           0.097628758  
+ 3600           0.099426555  
+ 3650           0.13076555   
+ 3700           0.10230445   
+ 3750           0.095551038  
+ 3800           0.1053428    
+ 3850           0.10506377   
+ 3900           0.096073015  
+ 3950           0.094265039  
+ 4000           0.10289985   
+ 4050           0.10186199   
+ 4100           0.095618298  
+ 4150           0.10174866   
+ 4200           0.096540862  
+ 4250           0.095948007  
+ 4300           0.099724432  
+ 4350           0.10043964   
+ 4400           0.086606408  
+ 4450           0.094803864  
+ 4500           0.097483835  
+ 4550           0.090449591  
+ 4600           0.10929233   
+ 4650           0.11066933   
+ 4700           0.099908478  
+ 4750           0.10453953   
+ 4800           0.1017934    
+ 4850           0.10138508   
+ 4900           0.096307117  
+ 4950           0.10635326   
+ 5000           0.097154986  
+ 5050           0.096610821  
+ 5100           0.1017846    
+ 5150           0.10543711   
+ 5200           0.10271279   
+ 5250           0.089726238  
+ 5300           0.096062713  
+ 5350           0.10654235   
+ 5400           0.096112158  
+ 5450           0.10358557   
+ 5500           0.11342036   
+ 5550           0.11501227   
+ 5600           0.10464136   
+ 5650           0.10275236   
+ 5700           0.092688713  
+ 5750           0.10735618   
+ 5800           0.099524249  
+ 5850           0.09043522   
+ 5900           0.09839086   
+ 5950           0.09976062   
+ 6000           0.09930958   
+ 6050           0.10371994   
+ 6100           0.10652328   
+ 6150           0.11458143   
+ 6200           0.09328824   
+ 6250           0.097422083  
+ 6300           0.093633313  
+ 6350           0.10010578   
+ 6400           0.08940061   
+ 6450           0.11115502   
+ 6500           0.096685166  
+ 6550           0.111333     
+ 6600           0.11329182   
+ 6650           0.096642943  
+ 6700           0.10535034   
+ 6750           0.092345904  
+ 6800           0.095134511  
+ 6850           0.098201295  
+ 6900           0.10838998   
+ 6950           0.10492958   
+ 7000           0.077505946  
+ 7050           0.078623761  
+ 7100           0.10370664   
+ 7150           0.087009872  
+ 7200           0.10296397   
+ 7250           0.11123141   
+ 7300           0.099623966  
+ 7350           0.10631293   
+ 7400           0.095553236  
+ 7450           0.10208284   
+ 7500           0.094368465  
+ 7550           0.093198188  
+ 7600           0.097383728  
+ 7650           0.10478954   
+ 7700           0.10903163   
+ 7750           0.11254339   
+ 7800           0.094716392  
+ 7850           0.09467966   
+ 7900           0.095222452  
+ 7950           0.10335053   
+ 8000           0.11217888   
+ 8050           0.096960462  
+ 8100           0.095423468  
+ 8150           0.086369524  
+ 8200           0.11939999   
+ 8250           0.10945232   
+ 8300           0.099858327  
+ 8350           0.095970577  
+ 8400           0.097477308  
+ 8450           0.093281169  
+ 8500           0.10162127   
+ 8550           0.10142795   
+ 8600           0.0951643    
+ 8650           0.09103246   
+ 8700           0.093553834  
+ 8750           0.10484178   
+ 8800           0.10122306   
+ 8850           0.10891655   
+ 8900           0.10289824   
+ 8950           0.092274229  
+ 9000           0.08769104   
+ 9050           0.10410435   
+ 9100           0.11037351   
+ 9150           0.10639842   
+ 9200           0.10477166   
+ 9250           0.099894221  
+ 9300           0.11618519   
+ 9350           0.10811193   
+ 9400           0.091615755  
+ 9450           0.10213558   
+ 9500           0.10271393   
+ 9550           0.10557888   
+ 9600           0.09526174   
+ 9650           0.10177104   
+ 9700           0.091471069  
+ 9750           0.11057829   
+ 9800           0.1170761    
+ 9850           0.089426702  
+ 9900           0.10855281   
+ 9950           0.1049809    
+ 10000          0.10394213   
+Loop time of 20.4046 on 1 procs for 2000000 steps with 120 atoms
+
+Performance: 42343382.349 tau/day, 98017.089 timesteps/s, 11.762 Matom-step/s
+99.7% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.0272     | 1.0272     | 1.0272     |   0.0 |  5.03
+Bond    | 0.91258    | 0.91258    | 0.91258    |   0.0 |  4.47
+Neigh   | 2.6125     | 2.6125     | 2.6125     |   0.0 | 12.80
+Comm    | 8.403      | 8.403      | 8.403      |   0.0 | 41.18
+Output  | 0.031605   | 0.031605   | 0.031605   |   0.0 |  0.15
+Modify  | 6.1535     | 6.1535     | 6.1535     |   0.0 | 30.16
+Other   |            | 1.264      |            |       |  6.20
+
+Nlocal:            120 ave         120 max         120 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            282 ave         282 max         282 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:            108 ave         108 max         108 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 108
+Ave neighs/atom = 0.9
+Ave special neighs/atom = 5.7
+Neighbor list builds = 49080
+Dangerous builds = 0
+#shell cp log.lammps log_A_${A}_omega_${om}.lammps
+########## Write dat files ######
+write_data after_run.dat write_restart after_run.reset
+ERROR: Unknown write_data keyword: write_restart (src/write_data.cpp:106)
+Last command: write_data after_run.dat write_restart after_run.reset
