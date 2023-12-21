@@ -1,0 +1,25 @@
+t = 0
+b = 50 50 50
+E = Etot U K
+
+backend = CPU
+sim_type = MC
+mc_steps = 1000
+mc_move_size = 0.1
+steps = 10000
+restart_step_counter = 0
+salt_concentration=0.15
+
+
+conf_file = output.dat
+topology = output.top
+trajectory_file = trajectory_file.dat
+energy_file = energy_file.txt
+T = 55 C
+ensemble = nvt
+delta_translation = 0.01
+delta_rotation = 0.01
+print_energy_every = 1
+print_conf_interval = 100000
+verlet_skin = 0.1
+time_scale = linear

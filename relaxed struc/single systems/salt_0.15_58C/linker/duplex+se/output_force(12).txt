@@ -1,0 +1,467 @@
+{
+    type = mutual_trap
+    particle = 38
+    ref_particle = 25
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 39
+    ref_particle = 24
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 40
+    ref_particle = 23
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 41
+    ref_particle = 22
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 42
+    ref_particle = 21
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 43
+    ref_particle = 20
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 44
+    ref_particle = 19
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 45
+    ref_particle = 18
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 46
+    ref_particle = 17
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 47
+    ref_particle = 16
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 48
+    ref_particle = 15
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 49
+    ref_particle = 14
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 50
+    ref_particle = 13
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 51
+    ref_particle = 12
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 52
+    ref_particle = 11
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 53
+    ref_particle = 10
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 54
+    ref_particle = 9
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 55
+    ref_particle = 8
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 56
+    ref_particle = 7
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 57
+    ref_particle = 6
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 58
+    ref_particle = 5
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 59
+    ref_particle = 4
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 60
+    ref_particle = 3
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 61
+    ref_particle = 2
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 62
+    ref_particle = 1
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 63
+    ref_particle = 0
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 0
+    ref_particle = 63
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 1
+    ref_particle = 62
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 2
+    ref_particle = 61
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 3
+    ref_particle = 60
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 4
+    ref_particle = 59
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 5
+    ref_particle = 58
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 6
+    ref_particle = 57
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 7
+    ref_particle = 56
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 8
+    ref_particle = 55
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 9
+    ref_particle = 54
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 10
+    ref_particle = 53
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 11
+    ref_particle = 52
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 12
+    ref_particle = 51
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 13
+    ref_particle = 50
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 14
+    ref_particle = 49
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 15
+    ref_particle = 48
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 16
+    ref_particle = 47
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 17
+    ref_particle = 46
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 18
+    ref_particle = 45
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 19
+    ref_particle = 44
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 20
+    ref_particle = 43
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 21
+    ref_particle = 42
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 22
+    ref_particle = 41
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 23
+    ref_particle = 40
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 24
+    ref_particle = 39
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
+
+{
+    type = mutual_trap
+    particle = 25
+    ref_particle = 38
+    stiff = 0.09
+    r0 = 1.2
+    PBC = 1
+}
