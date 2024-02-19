@@ -1,0 +1,46 @@
+INFO: seeding the RNG with -143458420
+INFO: Initializing backend 
+INFO: Simulation type: MD
+INFO: The generator will try to take into account bonded interactions by choosing distances between bonded neighbours no larger than 2.000000
+INFO: Using '/Users/alejandrosoto/Documents/KIT/Tools/oxDNA/oxDNA/oxDNA2_sequence_dependent_parameters.txt' as the input for sequence-dependent values
+INFO: Converting temperature from Celsius (65.000000 C°) to simulation units (0.112717)
+INFO: Using a maximum backbone force of 5  (the corresponding mbf_xmax is 0.120156) and a far value of 0.04
+INFO: Running Debye-Huckel at salt concentration =  0.1
+INFO: Using different widths for major and minor grooves
+INFO: Temperature change detected (new temperature: 65.00 C, 338.15 K), re-initialising the DNA interaction
+DEBUG: Debye-Huckel parameters: Q=0.054300, lambda_0=0.361646, lambda=1.214163, r_high=3.642490, cutoff=6.426533
+DEBUG: Debye-Huckel parameters: debye_huckel_RC=5.463735e+00, debye_huckel_B=2.237594e-04
+INFO: The Debye length at this temperature and salt concentration is 1.214163
+INFO: No order parameters file specified in input file; printing indices of any particle pairs that have a hydrogen bond between them
+INFO: No order parameters file specified in input file; printing indices of any particle pairs that have a hydrogen bond between them
+INFO: pid: 88241
+DEBUG: Debye-Huckel parameters: Q=0.054300, lambda_0=0.361646, lambda=1.214163, r_high=3.642490, cutoff=6.426533
+DEBUG: Debye-Huckel parameters: debye_huckel_RC=5.463735e+00, debye_huckel_B=2.237594e-04
+INFO: The Debye length at this temperature and salt concentration is 1.214163
+INFO: (Cells.cpp) N_cells_side: 3, 3, 3; rcut=7.02653, IS_MC: 0
+INFO: N: 74, N molecules: 2
+INFO: Using randomly distributed velocities
+INFO: Initial kinetic energy: 25.834881
+INFO: Langevin thermostat parameters: gamma, gamma_rot, diff, diff_rot: 0.0450867 0.0150289 2.5 7.5
+INFO: RELEASE: 
+INFO: GIT COMMIT: 
+INFO: COMPILED ON: 27/09/23
+
+INFO: Total Running Time: 1378.8 s, per step: 0.13788 ms
+INFO: Timings, in seconds, by Timer (total, own, spent in children)
+> SimBackend                       1378.803 (100.0)       14.097 (  1.0)     1364.706 ( 99.0)
+***> Lists                            6.200 (  0.4)        6.200 (  0.4)        0.000 (  0.0)
+***> Thermostat                      47.531 (  3.4)       47.531 (  3.4)        0.000 (  0.0)
+***> Forces                        1283.292 ( 93.1)     1283.292 ( 93.1)        0.000 (  0.0)
+***> First Step                      20.929 (  1.5)       20.929 (  1.5)        0.000 (  0.0)
+***> Observables                      6.753 (  0.5)        6.753 (  0.5)        0.000 (  0.0)
+
+INFO: END OF THE SIMULATION, everything went OK!
+INFO: Lists updated 136742 times (every ~73.130421 steps)
+INFO: Aggregated I/O statistics (set debug=1 for file-wise information)
+	  5.406 MB written to files
+	  6.115 KB written to stdout/stderr
+	For a total of  0.00393 MB/s
+
+Please cite at least the following publication for any work that uses the oxDNA simulation package
+  * E. Poppleton et al., J. Open Source Softw. 8, 4693 (2023), DOI: 10.21105/joss.04693
