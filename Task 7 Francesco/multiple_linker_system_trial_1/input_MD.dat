@@ -21,7 +21,7 @@
 	thermostat = langevin #modified by Alejandro
 	max_density_multiplier=10 #Could be this more than 10? If we work at lower density?
   	# bussi_tau = 1
-  T = 60C
+  T = 25C
 	newtonian_steps = 108
 	diff_coeff = 2.5
 	interaction_type = DNA2
