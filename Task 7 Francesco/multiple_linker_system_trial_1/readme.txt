@@ -13,6 +13,8 @@ The target density of the final density should not be too different compared wit
 
 The thermostat was changed to Langevin because many authors are using this to compare the experimental set up with the simulation at least for single systems I am not sure if this can be extended to multiple systems.
 
+Also the code line of max_density_multiplier parameter was changed because the system is larger if the density is very low it can crush the simulation
+
 Alejandro
 
 alejandro.soto@kit.edu
