@@ -1,0 +1,10 @@
+In the "indeed" folder, you can find all the data points generated for the linker (L1) and the y-shapes nanostructures at a salt concentration of 100 mM.
+
+Each folder corresponds to a specific temperature.
+
+The files named "thermo_analysis_errors.py" execute statistical analysis for each temperature. The final configuration of Tn-1 is used as the initial configuration for the next temperature point (Tn).
+
+Replicas have not been run; therefore, the statistical analysis refers to the calculation of the average from the "hb_count.dat" file.
+
+Within the Python code, you can explore alternative representative values such as the median and mode.
+
