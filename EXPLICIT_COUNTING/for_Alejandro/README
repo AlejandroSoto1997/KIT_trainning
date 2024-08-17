@@ -1,0 +1,6 @@
+"template" folder contains all the useful files.
+Go inside it and run all the following:
+
+1) change line 26 of file launch.sh
+2) set the right box side (computed with Box_size_calc.ipynb) at line 13
+3) bash launch.sh
