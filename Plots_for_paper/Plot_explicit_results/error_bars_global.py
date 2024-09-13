@@ -17,7 +17,8 @@ base_paths = {
     "L_4": "./L_4/hb",
     "L_7": "./L_7/hb",
     "L_11": "./L_11/hb",
-    "Y_0": "./Y_0/hb"
+    "Y_0": "./Y_0/hb",
+    "Y_0+L_11": "./Y_0+L_11/hb",
 }
 
 temps = [14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92]
@@ -58,7 +59,7 @@ marker_size = 10
 
 # Colores especificados
 colors = [
-    "#313695", "#588cc0", "#a3d3e6", "#e9f6e8", "#fee99d", "#fca55d", "#e34933", "#d73027", "#7f0d0b"
+"#313695", "#4b7db8", "#83b9d8", "#d1ecf4", "#fbfdc7", "#fed283", "#f99153", "#db382b", "#d73027", "#7f0d0b"
 ][::-1]
 
 # Crear la figura con dos subplots en horizontal
@@ -176,7 +177,8 @@ custom_values = {
     "L_4": 8,
     "L_7": 5,
     "L_11": 1,
-    "Y_0": 12  # Esto será tratado de manera especial
+    "Y_0": 12,
+    "Y_0+L_11": 11 # Esto será tratado de manera especial
 }
 
 # Subplot de dispersión para temperaturas a fracción 0.5
