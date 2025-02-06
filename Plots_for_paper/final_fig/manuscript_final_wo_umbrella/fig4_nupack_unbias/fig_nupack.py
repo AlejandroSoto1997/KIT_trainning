@@ -240,10 +240,30 @@ colors_1 = [
 "#313695", "#3c59a6", "#588cc0", "#74add1", "#a3d3e6", "#c1e4ef", "#e9f6e8", "#fbfdc7", "#fee99d", "#fed283", "#fca55d", "#f67f4b", "#e34933", "#ce2827", "#d73027", "#a50f15", "#7f0d0b"
 ]
 
+custom_names = {
+    "Y0": "Y",
+    "L-4": "LS16",
+    "L0": "LS12",
+    "L1": "LS11",
+    "L2": "LS10",
+    "L3": "LS9",
+    "L4": "LS8",
+    "L5": "LS7",
+    "L6": "LS6",
+    "L7": "LS5", 
+    "L8":"LS4",
+    "L9":"LS3",
+    "L10":"LS2",
+    "L11":"LS1",
+    "L12":"LS0",
+}
+
+name_original = df_tm_info_1['molecule_clean'].iloc[4]
+name_plot = custom_names.get(name_original, name_original)
 
 # Leer y graficar los datos, añadiendo la leyenda a cada gráfico
 df1 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[15]))
-axs[0].plot(df1["Temperature(C)"], 1-df1["Fraction of bases unpaired at equilibrium"], color = colors_1[0], label = df_tm_info_1['molecule_clean'].iloc[4])
+axs[0].plot(df1["Temperature(C)"], 1-df1["Fraction of bases unpaired at equilibrium"], color = colors_1[0], label = custom_names["Y0"])
 
 #df2 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[14]))
 #axs[0].plot(df2["Temperature(C)"], 1-df2["Fraction of bases unpaired at equilibrium"], color = colors_1[1], label = df_tm_info_1['molecule_clean'].iloc[6])
@@ -252,46 +272,46 @@ axs[0].plot(df1["Temperature(C)"], 1-df1["Fraction of bases unpaired at equilibr
 #axs[0].plot(df3["Temperature(C)"], 1-df3["Fraction of bases unpaired at equilibrium"], color = colors_1[2], label = df_tm_info_1['molecule_clean'].iloc[16])
 
 df4 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[0]))
-axs[0].plot(df4["Temperature(C)"], 1-df4["Fraction of bases unpaired at equilibrium"], color = colors_1[3], label = df_tm_info_1['molecule_clean'].iloc[0])
+axs[0].plot(df4["Temperature(C)"], 1-df4["Fraction of bases unpaired at equilibrium"], color = colors_1[3], label = custom_names["L-4"])
 
 df5 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[13]))
-axs[0].plot(df5["Temperature(C)"], 1-df5["Fraction of bases unpaired at equilibrium"], color = colors_1[4], label = df_tm_info_1['molecule_clean'].iloc[14])
+axs[0].plot(df5["Temperature(C)"], 1-df5["Fraction of bases unpaired at equilibrium"], color = colors_1[4], label = custom_names["L0"])
 
 df6 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[16]))
-axs[0].plot(df6["Temperature(C)"], 1-df5["Fraction of bases unpaired at equilibrium"], color = colors_1[5], label = df_tm_info_1['molecule_clean'].iloc[15])
+axs[0].plot(df6["Temperature(C)"], 1-df5["Fraction of bases unpaired at equilibrium"], color = colors_1[5], label = custom_names["L1"])
 
 df7 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[12]))
-axs[0].plot(df7["Temperature(C)"], 1-df7["Fraction of bases unpaired at equilibrium"], color = colors_1[6], label = df_tm_info_1['molecule_clean'].iloc[13])
+axs[0].plot(df7["Temperature(C)"], 1-df7["Fraction of bases unpaired at equilibrium"], color = colors_1[6], label = custom_names["L2"])
 
 df8 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[11]))
-axs[0].plot(df8["Temperature(C)"], 1-df8["Fraction of bases unpaired at equilibrium"], color = colors_1[7], label = df_tm_info_1['molecule_clean'].iloc[12])
+axs[0].plot(df8["Temperature(C)"], 1-df8["Fraction of bases unpaired at equilibrium"], color = colors_1[7], label = custom_names["L3"])
 
 df9 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[8]))
-axs[0].plot(df9["Temperature(C)"], 1-df9["Fraction of bases unpaired at equilibrium"], color = colors_1[8], label = df_tm_info_1['molecule_clean'].iloc[9])
+axs[0].plot(df9["Temperature(C)"], 1-df9["Fraction of bases unpaired at equilibrium"], color = colors_1[8], label = custom_names["L4"])
 
 df10 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[7]))
-axs[0].plot(df10["Temperature(C)"], 1-df10["Fraction of bases unpaired at equilibrium"], color = colors_1[9], label = df_tm_info_1['molecule_clean'].iloc[8])
+axs[0].plot(df10["Temperature(C)"], 1-df10["Fraction of bases unpaired at equilibrium"], color = colors_1[9], label = custom_names["L5"])
 
 df11 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[9]))
-axs[0].plot(df11["Temperature(C)"], 1-df11["Fraction of bases unpaired at equilibrium"], color = colors_1[10], label = df_tm_info_1['molecule_clean'].iloc[10])
+axs[0].plot(df11["Temperature(C)"], 1-df11["Fraction of bases unpaired at equilibrium"], color = colors_1[10], label = custom_names["L6"])
 
 df12 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[10]))
-axs[0].plot(df12["Temperature(C)"], 1-df12["Fraction of bases unpaired at equilibrium"], color = colors_1[11], label = df_tm_info_1['molecule_clean'].iloc[11])
+axs[0].plot(df12["Temperature(C)"], 1-df12["Fraction of bases unpaired at equilibrium"], color = colors_1[11], label = custom_names["L7"])
 
 df13 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[2]))
-axs[0].plot(df13["Temperature(C)"], 1-df13["Fraction of bases unpaired at equilibrium"], color = colors_1[12], label = df_tm_info_1['molecule_clean'].iloc[2])
+axs[0].plot(df13["Temperature(C)"], 1-df13["Fraction of bases unpaired at equilibrium"], color = colors_1[12], label = custom_names["L8"])
 
 df14 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[1]))
-axs[0].plot(df14["Temperature(C)"], 1-df14["Fraction of bases unpaired at equilibrium"], color = colors_1[13], label = df_tm_info_1['molecule_clean'].iloc[1])
+axs[0].plot(df14["Temperature(C)"], 1-df14["Fraction of bases unpaired at equilibrium"], color = colors_1[13], label = custom_names["L9"])
 
 df15 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[5]))
-axs[0].plot(df15["Temperature(C)"], 1-df15["Fraction of bases unpaired at equilibrium"], color = colors_1[14], label = df_tm_info_1['molecule_clean'].iloc[5])
+axs[0].plot(df15["Temperature(C)"], 1-df15["Fraction of bases unpaired at equilibrium"], color = colors_1[14], label = custom_names["L10"])
 
 df16 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[6]))
-axs[0].plot(df16["Temperature(C)"], 1-df16["Fraction of bases unpaired at equilibrium"], color = colors_1[15], label = df_tm_info_1['molecule_clean'].iloc[7])
+axs[0].plot(df16["Temperature(C)"], 1-df16["Fraction of bases unpaired at equilibrium"], color = colors_1[15], label = custom_names["L11"])
 
 df17 = pd.read_csv(os.path.join(directory_bases_profiles_1, archivos_bases_profiles_1[4]))
-axs[0].plot(df17["Temperature(C)"], 1-df17["Fraction of bases unpaired at equilibrium"], color = colors_1[16], label = df_tm_info_1['molecule_clean'].iloc[3])
+axs[0].plot(df17["Temperature(C)"], 1-df17["Fraction of bases unpaired at equilibrium"], color = colors_1[16], label = custom_names["L12"])
 # Añadir leyenda con dos columnas
 axs[0].legend(loc='lower left', fontsize=10, ncol=2)
 
@@ -406,25 +426,32 @@ axs[1].set_xlabel('Length sticky end (no. nucleotides)', fontsize=12)
 axs[1].set_xticks(np.arange(0, 17, 1))  # Especificar los ticks del eje x
 axs[1].tick_params(axis='both', which='major', labelsize=10)
 axs[1].set_ylim(50, 70)
-axs[1].set_ylabel('Melting temperature $(^{o}C)$', fontsize=12)
+axs[1].set_ylabel('Melting temperature $T_{m}$ $(^{o}C)$', fontsize=12)
 axs[1].text(-0.04, 1.07, 'b)', transform=axs[1].transAxes, fontsize=12, fontweight='bold', va='top', ha='right')
 #axs[1].tick_params(axis='y', which='both', left=False, right=False, labelleft=False, labelright=False)
 #axs[1].tick_params(axis='y', which='both', left=True, right=True, labelleft=False, labelright=False)
 #axs[1].set_ylim(66.5, 68)
-# Crear una barra de colores horizontal dentro del segundo subplot
+# Extract the values from the custom_names dictionary for the labels
+labels = list(custom_names.values())
+
+# Create a colorbar with custom labels
 cmap = mcolors.ListedColormap(colors)
-norm = mcolors.BoundaryNorm(boundaries=np.arange(len(df_tm_info_1) + 1) - 0.5, ncolors=len(df_tm_info_1))
+norm = mcolors.BoundaryNorm(boundaries=np.arange(len(labels) + 1) - 0.5, ncolors=len(labels))
 sm = cm.ScalarMappable(cmap=cmap, norm=norm)
 sm.set_array([])
 
-# Ajustar el tamaño y la posición de la barra de colores
+# Adjust the size and position of the colorbar
 cbar_ax = fig.add_axes([0.59, 0.22, 0.38, 0.03])  # [left, bottom, width, height]
-cbar = fig.colorbar(sm, cax=cbar_ax, orientation='horizontal', ticks=np.arange(len(df_tm_info_1['molecule_clean'])))
-cbar.ax.set_xticklabels(df_tm_info_1['molecule_clean'])  # Usar las etiquetas limpias
-# Controlar el tamaño del texto de las etiquetas de la barra de colores
-cbar.ax.tick_params(labelsize=7)  # Ajusta el tamaño de las etiquetas (puedes cambiar el número)
+cbar = fig.colorbar(sm, cax=cbar_ax, orientation='horizontal', ticks=np.arange(len(labels)))
 
-cbar.set_label('Molecules')
+# Set the custom labels from the dictionary
+cbar.ax.set_xticklabels(labels)  # Use the dictionary values as labels
+
+# Control the size of the text on the colorbar
+cbar.ax.tick_params(labelsize=7)  # Adjust the label size as needed
+
+# Add a label for the colorbar
+cbar.set_label('Molecules', fontsize=9)
 
 
 plt.tight_layout()
