@@ -1,0 +1,1954 @@
+nohup: ignoring input
+Processing temperature: 22
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_22/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_24/RUN_0
+Running oxdna for the first temperature: 22
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_24/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 24 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 24
+Processing temperature: 24
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_24/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_26/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_26/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 26 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 26
+Processing temperature: 26
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_26/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_28/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_28/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 28 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 28
+Processing temperature: 28
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_28/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_30/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_30/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 30 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 30
+Processing temperature: 30
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_30/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_32/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_32/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 32 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 32
+Processing temperature: 32
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_32/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_34/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_34/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 34 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 34
+Processing temperature: 34
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_34/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_36/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_36/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 36 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 36
+Processing temperature: 36
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_36/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_38/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_38/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 38 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 38
+Processing temperature: 38
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_38/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_40/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_40/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 40 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 40
+Processing temperature: 40
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_40/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_42/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_42/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 42 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 42
+Processing temperature: 42
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_42/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_44/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_44/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 44 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 44
+Processing temperature: 44
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_44/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_46/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_46/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 46 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 46
+Processing temperature: 46
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_46/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_48/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_48/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 48 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 48
+Processing temperature: 48
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_48/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_50/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_50/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 50 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 50
+Processing temperature: 50
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_50/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_52/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_52/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 52 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 52
+Processing temperature: 52
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_52/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_54/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_54/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 54 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 54
+Processing temperature: 54
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_54/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_56/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_56/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 56 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 56
+Processing temperature: 56
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_56/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_58/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_58/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 58 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 58
+Processing temperature: 58
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_58/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_60/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_60/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 60 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 60
+Processing temperature: 60
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_60/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_62/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_62/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 62 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 62
+Processing temperature: 62
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_62/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_64/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_64/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 64 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 64
+Processing temperature: 64
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_64/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_66/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_66/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 66 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 66
+Processing temperature: 66
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_66/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_68/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_68/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 68 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 68
+Processing temperature: 68
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_68/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_70/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_70/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 70 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 70
+Processing temperature: 70
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_70/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_72/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_72/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 72 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 72
+Processing temperature: 72
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_72/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_74/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_74/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 74 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 74
+Processing temperature: 74
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_74/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_76/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_76/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 76 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 76
+Processing temperature: 76
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_76/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_78/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_78/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 78 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 78
+Processing temperature: 78
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_78/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_80/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_80/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 80 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 80
+Processing temperature: 80
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_80/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_82/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_82/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 82 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 82
+Processing temperature: 82
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_82/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_84/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_84/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 84 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 84
+Processing temperature: 84
+Current directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_84/RUN_0
+Next directory: /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_86/RUN_0
+Content of /home/alejandrosoto/Documents/KIT/GPU_dir_sam/EXPLICIT_COUNTING/L_3/SALT_0.1/TEMP_86/RUN_0/input_MD.dat:
+# Original script by Alejandro Soto
+# Modified by Francesco Mambretti
+# Modified by Alejandro on 04.03.24 LARGER SYSTEMS
+# 04/02/2023
+
+## general input ###############
+backend = CUDA
+backend_precision = mixed #uncomment when using CUDA
+fix_diffusion = 0
+back_in_box = 0
+use_edge = 1
+edge_n_forces = 1
+
+## simulation options #############
+sim_type = MD
+ensemble = nvt
+dt = 0.005
+verlet_skin = 0.3
+steps = 1e9
+thermostat = brownian #modified by Alejandro
+max_density_multiplier=5 
+diff_coeff = 1.
+T = 86 C
+newtonian_steps = 108
+interaction_type = DNA2
+salt_concentration = 0.1
+max_backbone_force = 5.
+use_average_seq = no
+seq_dep_file = /home/alejandrosoto/Documents/oxDNA/oxDNA2_sequence_dependent_parameters.txt #put your path here
+#external_forces = 1
+#external_forces_file = output_force.txt
+
+## input files ###########################################
+topology = topol.top
+conf_file = restart.dat
+
+## output files ###########################################
+lastconf_file = last_conf_MD.dat
+trajectory_file = trajectory_MD.dat
+log_file= relax.output
+refresh_vel = 1
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy_file_md.txt
+print_conf_interval = 1e7
+print_energy_every = 1e5
+time_scale = linear
+
+data_output_1 = {
+    print_every = 1e5
+    name = hb_list.dat
+    col_1 = {
+        type = hb_list
+	only_count = True
+    }
+}
+Running oxdna for the temperature: 86
